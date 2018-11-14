@@ -1,0 +1,37 @@
+.listContainer {
+  display: flex;
+  align-items: center;
+  &.hasBorder {
+    border-bottom: 1px solid #d3d3d3;
+  }
+  .itemThumb {
+    width: 70px;
+    height: 70px;
+    margin-right: 24px;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .itemContent {
+    overflow: hidden;
+    flex: auto;
+    line-height: 1.5;
+    color: #333;
+    font-size: 32px;
+    .itemTitle {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 1em;
+    }
+    .itemNote {
+      font-size: 0.8em;
+      color: #999;
+    }
+  }
+  .itemExtra {
+    text-align: right;
+    flex: 0 0 30%;
+  }
+}
