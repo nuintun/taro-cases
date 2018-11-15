@@ -5,16 +5,13 @@ import { AtIcon } from 'taro-ui';
 import './list-item.scss';
 
 export default class ListItem extends Component {
+  static defaultProps = {
+    iconSize: 24,
+    iconColor: '#ccc'
+  };
+
   render() {
-    const {
-      thumb,
-      extraText,
-      note,
-      title,
-      arrow,
-      hasBorder,
-      iconStyle = { size: size ? size : 24, color: color ? color : '#ccc' }
-    } = this.props;
+    const { thumb, extraText, note, title, arrow, hasBorder, iconSize, iconColor } = this.props;
 
     return (
       <View className={hasBorder ? 'listContainer hasBorder' : 'listContainer'}>
@@ -35,9 +32,9 @@ export default class ListItem extends Component {
             </View>
           )}
           <View className="extraIcon">
-            {arrow === 'down' && <AtIcon value="chevron-down" style={iconStyle} />}
-            {arrow === 'up' && <AtIcon value="chevron-up" style={iconStyle} />}
-            {arrow === 'right' && <AtIcon value="chevron-right" style={iconStyle} />}
+            {arrow === 'down' && <AtIcon value="chevron-down" size={iconSize} color={iconColor} />}
+            {arrow === 'up' && <AtIcon value="chevron-up" size={iconSize} color={iconColor} />}
+            {arrow === 'right' && <AtIcon value="chevron-right" size={iconSize} color={iconColor} />}
           </View>
         </View>
       </View>

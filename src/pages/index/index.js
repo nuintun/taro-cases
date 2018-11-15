@@ -2,7 +2,8 @@ import { Component } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
 import './index.scss';
 
-import List, { ListItem } from '../../components/list';
+import List from '../../components/list';
+import ListItem from '../../components/list/list-item';
 
 export default class Index extends Component {
   config = {
