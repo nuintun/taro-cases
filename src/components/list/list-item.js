@@ -25,7 +25,7 @@ export default class ListItem extends Component {
             <View
               className="extraInfo"
               style={{
-                width: `calc(100% - ${iconStyle.size})`
+                width: `calc(100% - ${iconSize})`
               }}
             >
               {extraText}
